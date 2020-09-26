@@ -1,6 +1,12 @@
+<figure class="image">
+    <img src="https://raw.githubusercontent.com/syoi92/demo-fpnet/master/src/imgs/fig1.samples.TIF" width="900px">
+    <figcaption>Fig.(a) input floor plan images and our results of (b) the style-transferred plans and (c) the vectorized floor plans</figcaption>
+</figure>
+
 **Deep Floor Plan Analysis for Complicated Drawings Based on Style Transfer**  
 [[Seongyong Kim](http://syoi92.github.io)], [[Seoula Park](https://)], [[Hyengjung Kim](https://)], [[Kiyun Yu](https://)]  
 Journal of Computing in Civil Engineering, 2020.
+
 ***
 #### How to run this demo
 The demo requires Python =< 3.6 (The version of TensorFlow we specify in*requirements.txt* is not supported in Python 3.7+).  
@@ -12,17 +18,15 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-
-![Making-of Animation](https://raw.githubusercontent.com/streamlit/demo-self-driving/master/av_final_optimized.gif "Making-of Animation")
-
 #### Citation
 ```
 @article{FPNet2020, 
-title={Deep Floor Plan Analysis for Complicated Drawings Based on StyleTransfer}, 
-author={Seongyong Kim, Seula Park, Hyeongjung Kim, Kiyun Yu}, 
-journal={Journal of Computing in Civil Engineering}, 
-year={2020}, 
-DOI={10.1061/(ASCE)CP.1943-5487.0000942}}
+    title={Deep Floor Plan Analysis for Complicated Drawings Based on StyleTransfer}, 
+    author={Seongyong Kim, Seula Park, Hyeongjung Kim, Kiyun Yu}, 
+    journal={Journal of Computing in Civil Engineering}, 
+    year={2020}, 
+    DOI={10.1061/(ASCE)CP.1943-5487.0000942}
+}
 ```
 
 #### Acknowledgments
