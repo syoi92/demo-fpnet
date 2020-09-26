@@ -1,7 +1,7 @@
 This *FPNet demo* is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
 
 <figure class="image">
-    <img src="https://raw.githubusercontent.com/syoi92/demo-fpnet/master/src/imgs/fig1.samples.TIF" width="900px">
+    <img src="https://raw.githubusercontent.com/syoi92/demo-fpnet/master/src/imgs/fig1.samples.TIF" width="700px">
     <figcaption>Fig. (a) input floor plan images and our results of (b) the style-transferred plans and (c) the vectorized floor plans</figcaption>
 </figure>
 
