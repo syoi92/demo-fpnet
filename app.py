@@ -23,17 +23,52 @@ def main():
 
 
 def run_the_app():
+    # st.sidebar.markdown("### Samples")
+    # sample_index = st.sidebar.slider("choose a sample index (floorplan testset)", 1, 6, 2, 1)
     st.sidebar.markdown("### Samples")
-    sample_index = st.sidebar.slider("choose a sample index (floorplan testset)", 1, 6, 2, 1)
-
-    image_url = os.path.join(DATA_URL_ROOT, "src/imgs/", str(sample_index) + ".png")
+    default_samples = [1,2]
+    samples = [1, 2, 3, 4, 5, 6]
+    sample_indexs = st.sidebar.multiselect("choose sample types (maximum 2)", samples, default_samples)
+    st.sidebar.markdown("""
+    Type|Description|Type|Description
+    ---|---|---|---
+    1|walls with |2|kk
+    3|walls with |4|kk  
+    5|walls with |6|kk  
+    """)
 
     # parameters
     confidence_threshold, IP_threshold = object_detector_ui()
 
 
+    if len(sample_indexs) == 1:
+        images0 = load_app_samples(sample_indexs[0])
+        images = images0
+        use_column_width = True
+    elif len(sample_indexs) > 1:
+        images0 = load_app_samples(sample_indexs[0])
+        images1 = load_app_samples(sample_indexs[1])
+        images = list(map(list, zip(images0, images1)))
+        use_column_width = False
+    else:
+        st.error("choose at least one sample type")
+        return
 
-    return
+    st.image([images[0],images[0],images[0]], width=300, use_column_width=False)
+
+    # st.image(images[0:2], width=300)
+    st.subheader("Floorplans")
+    st.image(images[0], width=300, use_column_width=use_column_width)
+    #st.image([images0[0], images1[0]], width=300, use_column_width=True)
+
+    st.subheader("Style-transferred Plan")
+    st.image(images[1], width=300, use_column_width=use_column_width)
+
+    st.subheader("Vectorized Floorplan")
+    st.image(images[2], width=300, use_column_width=use_column_width)
+
+    st.subheader("3D pop-up")
+    st.image(images[3], width=300, use_column_width=use_column_width)
 
 
 def object_detector_ui():
@@ -51,22 +86,23 @@ def get_file_content_as_string(path):
     response = urllib.request.urlopen(url)
     return response.read().decode("utf-8")
 
-# path = 'src/imgs/fig1.samples.TIF'
 @st.cache(show_spinner=False)
-def get_file_content_as_img(path):
-    url = DATA_URL_ROOT + path
-    response = urllib.request.urlopen(url)
-
-    img = cv.imdecode(response.read(), cv.IMREAD_COLOR)
-    return response.read().decode("utf-8")
+def load_app_samples(index):
+    images = []
+    for it in ["00", "00", "02", "03"]:
+        image_url = "%ssrc/samples/%s/%s.png" % (DATA_URL_ROOT, it, str(index))
+        image = load_image(image_url)
+        images.append(image)
+    return images
 
 @st.cache(show_spinner=False)
 def load_image(url):
     with urllib.request.urlopen(url) as response:
        image = np.asarray(bytearray(response.read()), dtype="uint8")
-    image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-    image = image[:, :, [2, 1, 0]] # BGR -> RGB
+    image = cv2.imdecode(image, cv2.IMREAD_UNCHANGED)
+    image = image[:, :, [2, 1, 0, 3]] # BGR -> RGB
     return image
+
 
 DATA_URL_ROOT = "https://raw.githubusercontent.com/syoi92/demo-fpnet/master/"
 

@@ -1,14 +1,13 @@
-`This *FPNet demo* is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.`
+This *FPNet demo* is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
 
 <figure class="image">
     <img src="https://raw.githubusercontent.com/syoi92/demo-fpnet/master/src/imgs/fig1.samples.TIF" width="700px">
     <figcaption><sub>Fig. (a) input floor plan images and our results of (b) the style-transferred plans and (c) the vectorized floor plans</sub></figcaption>
 </figure>
 
-**Deep Floor Plan Analysis for Complicated Drawings Based on Style Transfer**  
+## **Deep Floor Plan Analysis for Complicated Drawings Based on Style Transfer**  
 [[Seongyong Kim](http://syoi92.github.io)], [[Seoula Park](https://)], [[Hyengjung Kim](https://)], [[Kiyun Yu](https://)]  
 Journal of Computing in Civil Engineering, 2020.
-
 
 
 ***
