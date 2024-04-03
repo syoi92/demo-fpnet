@@ -3,7 +3,7 @@
 Journal of Computing in Civil Engineering, 2021.
 
 
-This *FPNet* [Source](https://www.dropbox.com/sh/fosnic9d0b1ta1m/AADBhGZbPoIuBovZpF4bEaefa?dl=0) is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
+This *FPNet* [[Source](https://www.dropbox.com/sh/fosnic9d0b1ta1m/AADBhGZbPoIuBovZpF4bEaefa?dl=0)] is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
 
 <figure class="image">
     <img src="src/imgs/fig1.samples.png" width="700px">
