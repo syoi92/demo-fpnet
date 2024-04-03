@@ -1,9 +1,9 @@
 ## **Deep Floor Plan Analysis for Complicated Drawings Based on Style Transfer**  
 [Seongyong Kim](http://syoi92.github.io), Seula Park, Hyengjung Kim, Kiyun Yu  
-Journal of Computing in Civil Engineering, 2020.
+Journal of Computing in Civil Engineering, 2021.
 
 
-This *FPNet* is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
+This *FPNet* [Source](https://www.dropbox.com/sh/fosnic9d0b1ta1m/AADBhGZbPoIuBovZpF4bEaefa?dl=0) is able to reconstruct walls in areas with overlapping graphics or nonuniform patterns, thus allowing the room structures to be recovered even from complicated drawings.
 
 <figure class="image">
     <img src="src/imgs/fig1.samples.png" width="700px">
